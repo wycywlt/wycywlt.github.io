@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>何为域名解析</title>
+    <link href="/2022/10/26/%E4%BD%95%E4%B8%BA%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/"/>
+    <url>/2022/10/26/%E4%BD%95%E4%B8%BA%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</url>
+    
+    <content type="html"><![CDATA[<p>域名解析是把域名指向网站空间IP，让人们通过注册的域名可以方便地访问到网站的一种服务<br>IP地址是网络上标识站点的数字地址，为了方便记忆，采用域名来代替IP地址标识站点地址<br>域名解析就是域名到IP地址的转换过程。域名的解析工作由DNS服务器完成。<br>域名是一串 由字母和数字组成 的计算机标识符，相当于计算机的门牌号<br>比如sfn.cn，这就是一个非常典型的域名</p><p>域名往往具有一定的规律，和网站的名称、业务具有一定关联性，且一般都比较简单，所以方便人们记忆和输入。</p><p>但是计算机并不能直接识别域名，所以需要某个环节将域名翻译成可由计算机识别的IP地址，这个环节就是域名解析。</p><p>也就是说域名解析就是将人们方便记忆的域名翻译成计算机识别的一长串IP地址</p><h2 id="如何设置域名解析？"><a href="#如何设置域名解析？" class="headerlink" title="如何设置域名解析？"></a>如何设置域名解析？</h2><p>域名解析需要通过专门的域名服务商进行设置，一般来说域名注册商也提供域名解析服务<br>也就是你在哪个平台注册的域名，就可以在哪个平台解析域名</p><h2 id="DNS记录"><a href="#DNS记录" class="headerlink" title="DNS记录"></a>DNS记录</h2><p>A记录</p><p>返回域名对应的IPv4地址</p><p>NS记录</p><p>域名服务器<br>返回该域名由哪台域名服务器解析</p><p>PTR记录</p><p>反向记录<br>从IP地址到域名的记录</p><p>MX记录</p><p>电子邮件交换记录<br>记录邮件域名对应的IP地址</p><h2 id="解析过程"><a href="#解析过程" class="headerlink" title="解析过程"></a>解析过程</h2><p>DNS解析过程是递归查询的，具体过程如下：</p><ul><li>用户要访问域名<a href="http://www.example.com时,先查看本机hosts是否有记录或者本机是否有dns缓存,如果有,直接返回结果,否则向递归服务器查询该域名的ip地址/">www.example.com时，先查看本机hosts是否有记录或者本机是否有DNS缓存，如果有，直接返回结果，否则向递归服务器查询该域名的IP地址</a></li><li>递归缓存为空时，首先向根服务器查询com顶级域的IP地址</li><li>根服务器告知递归服务器com顶级域名服务器的IP地址</li><li>递归向com顶级域名服务器查询负责example.com的权威服务器的IP</li><li>com顶级域名服务器返回相应的IP地址</li><li>递归向example.com的权威服务器查询<a href="http://www.example.com的地址记录/">www.example.com的地址记录</a></li><li>权威服务器告知<a href="http://www.example.com的地址记录/">www.example.com的地址记录</a></li><li>递归服务器将查询结果返回客户端</li></ul><h2 id="域传送"><a href="#域传送" class="headerlink" title="域传送"></a>域传送</h2><p>DNS服务器可以分为主服务器、备份服务器和缓存服务器<br>域传送是指备份服务器从主服务器拷贝数据，并使用得到的数据更新自身数据库<br>域传送是在主备服务器之间同步数据库的机制</p><h2 id="相关漏洞"><a href="#相关漏洞" class="headerlink" title="相关漏洞"></a>相关漏洞</h2><p>DNS劫持<br>DNS劫持有多种方式，比较早期的攻击方式是通过攻击域名解析服务器，或是伪造DNS响应的方法，来将域名解析到恶意的IP地址。</p><p>随着互联网应用的不断发展，出现了基于废弃记录的劫持方式<br>这种方式发生的场景是次级域名的解析记录指向第三方资源，而第三方资源被释放后，解析记录并没有取消<br>在这种场景下，可以对应申请第三方资源，以获取控制解析记录的能力。</p><p>拒绝服务<br>DNS服务通常会开启UDP端口，当DNS服务器拥有大量二级域NS记录时，通过DNS的UDP反射攻击可以实现高倍的拒绝服务</p><p>【参考链接1】<br>【参考链接2】<br>————————————————<br>版权声明：本文为CSDN博主「相思寄清风」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/weixin_45139342/article/details/125658291">https://blog.csdn.net/weixin_45139342/article/details/125658291</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/10/25/hello-world/"/>
+    <url>/2022/10/25/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start9NNaAFQ3F-M"><a href="#Quick-Start9NNaAFQ3F-M" class="headerlink" title="Quick Start9NNaAFQ3F@M"></a>Quick Start9NNaAFQ3F@M</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
